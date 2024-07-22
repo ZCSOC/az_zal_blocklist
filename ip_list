@@ -2,6 +2,9 @@
 # Avoid adding customer IP and trusted local/cloud provider IP
 # Add reason for blocking with clear description 
 
+#Miraibotnet
+104.209.38.94
+
 #MUIEBLACKCAT
 198.57.27.196
 
