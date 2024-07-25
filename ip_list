@@ -2,6 +2,7 @@
 # Avoid adding customer IP and trusted local/cloud provider IP
 # Add reason for blocking with clear description 
 
+
 #APACHE path traversal
 103.232.122.33
 43.133.78.7
@@ -22,6 +23,7 @@
 223.76.215.193
 
 #BC_INFRA_Suspicious_IP's
+84.54.51.37
 100.42.189.177
 101.43.12.106
 101.47.6.209
