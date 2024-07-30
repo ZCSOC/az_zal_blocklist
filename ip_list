@@ -2,6 +2,8 @@
 # Avoid adding customer IP and trusted local/cloud provider IP
 # Add reason for blocking with clear description 
 
+#Russia
+188.124.36.88
 
 #APACHE path traversal
 103.232.122.33
