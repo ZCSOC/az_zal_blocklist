@@ -1,26 +1,11 @@
-# CSOC Reported IP, causing suspicious activities in Azure infra
-# Avoid adding customer IP and trusted local/cloud provider IP
-# Add reason for blocking with clear description 
-
-#Testing
 27.4.232.109
-
-#DropShiel IP
 80.82.77.202
 80.82.77.139
 5.42.84.98
-
-#Email server attacks
 31.202.53.78
-
-#RDP mstshash=Administr
 88.214.25.65
 88.214.25.61
-
-#Russia
 188.124.36.88
-
-#APACHE path traversal
 34.64.88.74
 193.233.85.101
 102.165.46.208
@@ -89,30 +74,18 @@
 154.16.183.204
 93.113.63.8
 139.59.14.245
-
-#Miraibotnet
 104.209.38.94
-
-#MUIEBLACKCAT
 198.57.27.196
-
-#nmap
 48.217.73.66
 52.185.50.240
 52.148.155.157
 20.83.228.36
-
-#China IP Path Traversal
 116.130.185.126
 223.76.215.193
 116.198.35.209
 8.220.210.24
 114.232.87.250
-
-#Russia
 178.67.249.210
-
-#BC_INFRA_Suspicious_IP's
 178.79.139.171
 172.245.118.154
 93.113.63.8
@@ -239,9 +212,6 @@
 95.181.173.153
 98.142.142.192
 83.97.73.245
-
-#threatview.io
-
 101.201.54.74
 101.32.34.196
 101.35.141.80
