@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Add x to -euo when debugging
-set -euo pipefail
+set -euox pipefail
 
 # Use the env provided values:
 # $PAT_DOPS, $ORG, $PROJECT, $REPO
