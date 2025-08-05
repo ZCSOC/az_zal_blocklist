@@ -1,0 +1,25 @@
+name: Mirror list to Azure Repos
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'ip_list'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 1. Check out the repo
+      - uses: actions/checkout@v4
+
+      # 2. Push to Repo
+      - name: Push to Repo
+        env:
+          AZ_PAT: ${{ secrets.PAT_DOPS }}
+          ORG: ${{ secrets.ORG }}
+          PROJECT: ${{ secrets.PROJ }}
+          REPO: ${{ secrets.REPO }}
+          # USER: ${{ secrets.USER }}
+
+        run: bash .github/scripts/azure-push.sh
