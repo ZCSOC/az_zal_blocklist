@@ -51,7 +51,12 @@ EOF
 
 # 5) Push via the REST API
 PUSH_URL="https://dev.azure.com/${ORG}/${PROJECT}/_apis/git/repositories/${REPO}/pushes?api-version=6.0"
-curl -sS -u :"${AZ_PAT}" \
+if curl -sS -u :"${AZ_PAT}" \
      -H "Content-Type: application/json" \
      -d "${BODY}" \
-     "${PUSH_URL}" | jq .
+     "${PUSH_URL}" > /dev/null; then
+  echo "Push succeeded."
+else
+  echo "Push failed." >&2
+  exit 1
+fi
