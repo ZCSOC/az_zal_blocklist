@@ -24,7 +24,7 @@ OLD_OBJECT_ID=$(curl -sS -u :${AZ_PAT} "${REFS_URL}" \
 
 # Read and JSON-escape, removes duplicates and IPv6 from the file content
 FILE_CONTENT=$(
-  grep -E '^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$' "${SOURCE_FILE}" |
+  grep -E '^[0-9]{1,3}(\.[0-9]{1,3}){3}$' "${SOURCE_FILE}" |
   sort -u |
   jq -Rs .
 )
