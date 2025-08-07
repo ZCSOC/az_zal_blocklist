@@ -26,7 +26,7 @@ OLD_OBJECT_ID=$(curl -sS -u :${AZ_PAT} "${REFS_URL}" \
 FILE_CONTENT=$(
   jq -Rs '
     split("\n")
-    | map(select(test("^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$")))
+    | map(select(test("^(?:[0-9]{1,3}[.]){3}[0-9]{1,3}$")))
     | unique
     | join("\n")
     | @json
