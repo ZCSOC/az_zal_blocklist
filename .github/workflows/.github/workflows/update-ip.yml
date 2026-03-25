@@ -1,0 +1,29 @@
+name: Update IP Blocklist
+ 
+on:
+  repository_dispatch:
+    types: [add-ip]
+ 
+jobs:
+  update:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+ 
+      - name: Add IP to file
+        run: |
+          echo "${{ github.event.client_payload.src_ip }}" >> ip_list
+ 
+      - name: Remove duplicates
+        run: |
+          sort -u ip_list -o ip_list
+ 
+      - name: Commit and push
+        run: |
+          git config user.name "splunk-bot"
+          git config user.email "splunk@local"
+          git add ip_list
+          git commit -m "Add IP ${{ github.event.client_payload.src_ip }}" || echo "No changes"
+          git push
